@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useHeroMaxHealth } from "../../../providers/HeroMaxHealth.provider";
+import { useHeroMaxHealth } from "../../../../../providers/HeroMaxHealth.provider";
 import { ButtonProps } from "../Button.props";
 import S from "./IncreaseButton.module.scss";
 

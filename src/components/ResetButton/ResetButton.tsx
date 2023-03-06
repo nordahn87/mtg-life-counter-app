@@ -1,5 +1,5 @@
 import { FC, Fragment, useState } from "react";
-import { useHeroMaxHealth } from "../../../providers/HeroMaxHealth.provider";
+import { useHeroMaxHealth } from "../../providers/HeroMaxHealth.provider";
 import S from "./ResetButton.module.scss";
 
 export const ResetButton: FC = () => {
