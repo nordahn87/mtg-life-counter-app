@@ -6,12 +6,15 @@
 }
 
 .lifeCounter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 4rem;
     font-weight: 400;
-    color: white;
+    color: var(--color-white);
 }
 
 .icon {
-    color: white;
+    color: var(--color-white);
     font-size: 2rem;
 }

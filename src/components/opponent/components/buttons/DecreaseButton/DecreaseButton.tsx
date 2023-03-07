@@ -4,14 +4,14 @@ import { ButtonProps } from "../Button.props";
 import S from "./DecreaseButton.module.scss";
 
 export const DecreaseButton: FC<ButtonProps> = (props) => {
-    const { setCommanderDamage } = useCommanderDamage();
+   
 
     const handleDecreaseCommanderDamage = () => {
-        setCommanderDamage((damage: number) => damage - props.amount);
+        props.setCommanderDamage((damage: number) => damage - props.amount);
     };
 
     return (
-        <button className={S.container} onClick={handleDecreaseCommanderDamage}>
+        <button className={S.wrapper} onClick={handleDecreaseCommanderDamage}>
             {props.title}
         </button>
     );

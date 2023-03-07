@@ -1,7 +1,6 @@
-.container {
-    background-color: rgb(84, 192, 84);
-    color: white;
-    padding: 10px;
-    height: 60px;
-    font-size: 1.6rem;
+@import "../.././../../../styles/mixins/mixins.scss";
+
+.wrapper {
+    background-color: var(--color-green);
+    @include action-buttons;
 }

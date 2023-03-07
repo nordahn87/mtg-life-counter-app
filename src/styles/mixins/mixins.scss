@@ -1,0 +1,13 @@
+@mixin buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+@mixin action-buttons {
+    color: var(--color-darkGrey);
+    padding: 10px;
+    height: 60px;
+    font-size: 1.6rem;
+}

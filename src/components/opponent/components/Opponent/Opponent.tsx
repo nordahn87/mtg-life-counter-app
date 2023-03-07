@@ -5,15 +5,16 @@ import { IncreaseButtons } from "../buttons/IncreaseButtons/IncreaseButtons";
 import S from "./Opponent.module.scss";
 
 export interface OpponentProps {
-    CurrentCommanderDamage: number; 
+    CurrentCommanderDamage: number;
+    setCommanderDamage: any;
 }
 
 export const Opponent: FC<OpponentProps> = (props) => {
     return (
         <div className={S.wrapper}>
-            <DecreaseButtons />
+            <DecreaseButtons setCommanderDamage={props.setCommanderDamage} />
             <CommanderDamageCounter CurrentCommanderDamage={props.CurrentCommanderDamage} />
-            <IncreaseButtons />
+            <IncreaseButtons setCommanderDamage={props.setCommanderDamage} />
         </div>
     );
 };

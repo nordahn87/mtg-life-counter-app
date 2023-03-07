@@ -11,7 +11,7 @@ export const DecreaseButton: FC<ButtonProps> = (props) => {
     };
 
     return (
-        <button className={S.container} onClick={handleDecreaseHeroCurrentHealth}>
+        <button className={S.wrapper} onClick={handleDecreaseHeroCurrentHealth}>
             {props.title}
         </button>
     );

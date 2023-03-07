@@ -1,3 +1,39 @@
+.wrapper {
+    padding: 0 5px;
+}
+
 .container {
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--color-white);
+    text-align: center;
+    padding: 5px 0;
+}
+
+.resetButton {
+    border: 3px solid var(--color-white);
+    color: var(--color-white);
+    width: 100%;
+    padding: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.resetButtonConfirm {
+    background-color: var(--color-orange);
+    color: var(--color-darkGrey);
+    padding: 20px 0;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.resetButtonCancel {
+    background-color: var(--color-blue);
+    color: var(--color-darkGrey);
+    padding: 20px 0;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
 }

@@ -1,6 +1,5 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5px;
+@import "../.././../../../styles/mixins/mixins.scss";
+
+.wrapper {
+    @include buttons-container;
 }
