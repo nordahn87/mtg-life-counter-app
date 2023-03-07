@@ -11,7 +11,7 @@ export const CommanderDamageCounter: FC<CommanderDamageCounterProps> = (props) =
         <div className={S.wrapper}>
             <div className={S.damageCounter}>
                 {props.CurrentCommanderDamage}
-                <div className={S.icon}>&#9876;</div>
+                <img className={S.icon} src="./icons/sword.svg" />
             </div>
         </div>
     );

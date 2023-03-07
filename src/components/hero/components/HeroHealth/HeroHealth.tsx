@@ -8,7 +8,7 @@ export const HeroHealth: FC = () => {
     return (
         <div className={S.wrapper}>
             <div className={S.lifeCounter}>{heroMaxHealth}</div>
-            <div className={S.icon}>&#x2764;</div>
+            <img className={S.icon} src="./icons/heart.svg" />
         </div>
     );
 };
