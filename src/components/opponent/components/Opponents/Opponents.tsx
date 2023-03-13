@@ -4,32 +4,19 @@ import { useCommanderDamage } from "../../../../providers/CommanderDamage.provid
 import S from "./Opponents.module.scss";
 
 export const Opponents: FC = () => {
-    const {
-        commanderDamageOpponentOne,
-        setCommanderDamageOpponentOne,
-        commanderDamageOpponentTwo,
-        setCommanderDamageOpponentTwo,
-        commanderDamageOpponentThree,
-        setCommanderDamageOpponentThree,
-    } = useCommanderDamage();
+    const { opponentsData } = useCommanderDamage();
 
     return (
         <div className={S.wrapper}>
-            <h2 className={S.opponent}>Opponent 1</h2>
-            <Opponent
-                CurrentCommanderDamage={commanderDamageOpponentOne}
-                setCommanderDamage={setCommanderDamageOpponentOne}
-            />
-            <h2 className={S.opponent}>Opponent 2</h2>
-            <Opponent
-                CurrentCommanderDamage={commanderDamageOpponentTwo}
-                setCommanderDamage={setCommanderDamageOpponentTwo}
-            />
-            <h2 className={S.opponent}>Opponent 3</h2>
-            <Opponent
-                CurrentCommanderDamage={commanderDamageOpponentThree}
-                setCommanderDamage={setCommanderDamageOpponentThree}
-            />
+            {/* TODO: Find a better way to render opponents */}
+            {opponentsData.map((item: any) => {
+                return (
+                    <div key={item.id}>
+                        <h2 className={S.opponent}>{item.name}</h2>
+                        <Opponent CurrentCommanderDamage={item.state} setCommanderDamage={item.setState} />
+                    </div>
+                );
+            })}
         </div>
     );
 };

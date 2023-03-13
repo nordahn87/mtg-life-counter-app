@@ -3,10 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
-<g>
-	<polygon fill="#FFFFFF" points="228.1,468.97 271.9,468.97 289,468.97 325,468.97 325,148.2 250,31.03 175,148.2 175,468.97 
-		214,468.97 	"/>
-	<polygon fill="#FFFFFF" points="135,303.99 105.69,274.68 0,251.48 23.2,357.17 135,468.97 	"/>
-	<polygon fill="#FFFFFF" points="365,303.99 394.31,274.68 500,251.48 476.8,357.17 365,468.97 	"/>
-</g>
+<path fill="#FFFFFF" d="M239.6,338.01l-74.88-181.79l181.3,76.08l73.42,86.8c69.26-80.04,117.93-176.66,45.01-249.58
+	C361.65-33.27,250.1,98,250,98.12C249.9,98,138.35-33.27,35.56,69.52C-114.44,219.52,250,469.79,250,469.79s33.03-22.68,75.1-58.48
+	L239.6,338.01z"/>
 </svg>

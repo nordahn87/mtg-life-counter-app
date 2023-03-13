@@ -5,7 +5,7 @@ import { IncreaseButtons } from "../buttons/IncreaseButtons/IncreaseButtons";
 import S from "./Opponent.module.scss";
 
 export interface OpponentProps {
-    CurrentCommanderDamage: number;
+    CurrentCommanderDamage: any;
     setCommanderDamage: any;
 }
 
