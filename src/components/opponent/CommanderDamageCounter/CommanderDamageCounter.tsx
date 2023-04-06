@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { useCommanderDamage } from "../../../providers/CommanderDamage.provider";
 import S from "./CommanderDamageCounter.module.scss";
 
 export interface CommanderDamageCounterProps {

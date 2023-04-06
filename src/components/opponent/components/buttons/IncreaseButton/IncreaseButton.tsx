@@ -1,12 +1,20 @@
 import { FC } from "react";
-import { useCommanderDamage } from "../../../../../providers/CommanderDamage.provider";
-import { ButtonProps } from "../Button.props";
 import S from "./IncreaseButton.module.scss";
 
-export const IncreaseButton: FC<ButtonProps> = (props) => {
+export interface ButtonProps {
+    setCommanderDamage: any;
+    CurrentCommanderDamage: any;
+    amount: number;
+    title: string;
+}
 
+export const IncreaseButton: FC<ButtonProps> = (props) => {
     const handleIncreaseCommanderDamage = () => {
         props.setCommanderDamage((damage: number) => damage + props.amount);
+
+        if (props.CurrentCommanderDamage >= 21) {
+            props.setCommanderDamage(21);
+        }
     };
 
     return (

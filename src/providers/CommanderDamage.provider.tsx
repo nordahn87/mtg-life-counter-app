@@ -19,7 +19,7 @@ export const CommanderDamageProvider = (props: any): JSX.Element => {
         if (dataOpponentThree !== null) setCommanderDamageOpponentThree(JSON.parse(dataOpponentThree));
 
         const dataOpponentFour = window.localStorage.getItem("CURRENT_COMMANDER_DAMAGE_OPPONENT_4");
-        if (dataOpponentFour !== null) setCommanderDamageOpponentThree(JSON.parse(dataOpponentFour));
+        if (dataOpponentFour !== null) setCommanderDamageOpponentFour(JSON.parse(dataOpponentFour));
     }, []);
 
     useEffect(() => {
@@ -30,8 +30,12 @@ export const CommanderDamageProvider = (props: any): JSX.Element => {
             JSON.stringify(commanderDamageOpponentThree),
         );
         window.localStorage.setItem("CURRENT_COMMANDER_DAMAGE_OPPONENT_4", JSON.stringify(commanderDamageOpponentFour));
-    }, [commanderDamageOpponentOne, commanderDamageOpponentTwo, commanderDamageOpponentThree]);
-
+    }, [
+        commanderDamageOpponentOne,
+        commanderDamageOpponentTwo,
+        commanderDamageOpponentThree,
+        commanderDamageOpponentFour,
+    ]);
 
     //TODO: Find a better way to render opponents
     const opponentsData = [
