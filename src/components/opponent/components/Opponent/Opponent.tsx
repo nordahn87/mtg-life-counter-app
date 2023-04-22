@@ -20,9 +20,6 @@ export const Opponent: FC<OpponentProps> = (props) => {
         } else {
             setIsDisabled(false);
         }
-        console.log(props.CurrentCommanderDamage);
-
-        console.log("Is this disabled? " + isDisabled);
     }, [props.CurrentCommanderDamage]);
 
     return (

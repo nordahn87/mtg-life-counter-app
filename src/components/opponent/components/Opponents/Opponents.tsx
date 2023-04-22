@@ -12,7 +12,11 @@ export const Opponents: FC = () => {
             {opponentsData.map((item: any) => {
                 return (
                     <div key={item.id}>
-                        <h2 className={S.opponent}>{item.name}</h2>
+                        <div className={S.container}>
+                            <div className={S.iconContainer}>-</div>
+                            <h2 className={S.opponent}>{item.name}</h2>
+                            <div className={S.iconContainer}>+</div>
+                        </div>
                         <Opponent CurrentCommanderDamage={item.state} setCommanderDamage={item.setState} />
                     </div>
                 );

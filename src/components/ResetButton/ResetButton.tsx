@@ -3,9 +3,11 @@ import { useCommanderDamage } from "../../providers/CommanderDamage.provider";
 import { useHeroMaxHealth } from "../../providers/HeroMaxHealth.provider";
 import S from "./ResetButton.module.scss";
 
-export const ResetButton: FC = () => {
-    const [showReset, setShowReset] = useState<boolean>(false);
+type ResetButtonProps = {
+    setAccordionState: any;
+};
 
+export const ResetButton: FC<ResetButtonProps> = (props) => {
     const { setHeroMaxHealth } = useHeroMaxHealth();
     const { setCommanderDamageOpponentOne, setCommanderDamageOpponentTwo, setCommanderDamageOpponentThree } =
         useCommanderDamage();
@@ -16,32 +18,22 @@ export const ResetButton: FC = () => {
         setCommanderDamageOpponentOne(0);
         setCommanderDamageOpponentTwo(0);
         setCommanderDamageOpponentThree(0);
-        setShowReset(false);
+        props.setAccordionState(false);
     };
 
-    const openResetOption = () => {
-        setShowReset(!showReset);
-    };
-
-    const closeResetOption = () => {
-        setShowReset(false);
+    const cancelReset = () => {
+        props.setAccordionState(false);
     };
 
     return (
         <div className={S.wrapper}>
-            <button className={S.resetButton} onClick={openResetOption}>
-                Reset
+            <p className={S.confirmationText}>Sure you want to reset?</p>
+            <button className={S.resetButtonConfirm} onClick={handleReset}>
+                Confirm
             </button>
-            {showReset ? (
-                <div className={S.container}>
-                    <button className={S.resetButtonConfirm} onClick={handleReset}>
-                        Yes
-                    </button>
-                    <button className={S.resetButtonCancel} onClick={closeResetOption}>
-                        No
-                    </button>
-                </div>
-            ) : null}
+            <button className={S.resetButtonCancel} onClick={cancelReset}>
+                Cancel
+            </button>
         </div>
     );
 };

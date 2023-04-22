@@ -7,7 +7,7 @@ type MaintProps = {
 
 export const Main: FC<MaintProps> = (props) => {
     return (
-        <main>
+        <main className={S.wrapper}>
             {props.children}
             <img className={S.img} src="./images/background.jpg" alt="Background" />
         </main>
