@@ -4,3 +4,16 @@
     letter-spacing: 1px;
     text-align: center;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--color-grey);
+}
