@@ -1,0 +1,21 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.opponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-grey);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--color-grey);
+}
