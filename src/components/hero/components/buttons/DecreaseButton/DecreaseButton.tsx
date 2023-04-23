@@ -1,13 +1,13 @@
 import { FC } from "react";
-import { useHeroMaxHealth } from "../../../../../providers/HeroMaxHealth.provider";
+import { useHeroStatus } from "../../../../../providers/HeroStatus.provider";
 import { ButtonProps } from "../Button.props";
 import S from "./DecreaseButton.module.scss";
 
 export const DecreaseButton: FC<ButtonProps> = (props) => {
-    const { setHeroMaxHealth } = useHeroMaxHealth();
+    const { setHeroCurrentHealth } = useHeroStatus();
 
     const handleDecreaseHeroCurrentHealth = () => {
-        setHeroMaxHealth((health: number) => health - props.amount);
+        setHeroCurrentHealth((health: number) => health - props.amount);
     };
 
     return (

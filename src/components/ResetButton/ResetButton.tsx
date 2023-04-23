@@ -1,6 +1,6 @@
-import { FC, Fragment, useState } from "react";
+import { FC } from "react";
 import { useCommanderDamage } from "../../providers/CommanderDamage.provider";
-import { useHeroMaxHealth } from "../../providers/HeroMaxHealth.provider";
+import { useHeroStatus } from "../../providers/HeroStatus.provider";
 import S from "./ResetButton.module.scss";
 
 type ResetButtonProps = {
@@ -8,13 +8,13 @@ type ResetButtonProps = {
 };
 
 export const ResetButton: FC<ResetButtonProps> = (props) => {
-    const { setHeroMaxHealth } = useHeroMaxHealth();
+    const { setHeroCurrentHealth } = useHeroStatus();
     const { setCommanderDamageOpponentOne, setCommanderDamageOpponentTwo, setCommanderDamageOpponentThree } =
         useCommanderDamage();
 
     // This will reset state and close reset option
     const handleReset = () => {
-        setHeroMaxHealth(40);
+        setHeroCurrentHealth(40);
         setCommanderDamageOpponentOne(0);
         setCommanderDamageOpponentTwo(0);
         setCommanderDamageOpponentThree(0);
