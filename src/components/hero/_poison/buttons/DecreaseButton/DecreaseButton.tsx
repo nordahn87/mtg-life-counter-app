@@ -7,11 +7,13 @@ export const DecreaseButton: FC<ButtonProps> = (props) => {
     const { setHeroCurrentPoison, heroCurrentPoison } = useHeroStatus();
 
     const handleIncreaseHeroCurrentPoison = () => {
-        setHeroCurrentPoison((poison: number) => poison - props.amount);
+        let heroPoisonCounterDecrease = heroCurrentPoison - props.amount;
 
-        if (heroCurrentPoison <= 0) {
-            setHeroCurrentPoison(0);
+        if (heroPoisonCounterDecrease < 0) {
+            heroPoisonCounterDecrease = 0;
         }
+        
+        setHeroCurrentPoison(heroPoisonCounterDecrease);
     };
 
     return (
