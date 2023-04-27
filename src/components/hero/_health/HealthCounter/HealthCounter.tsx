@@ -1,11 +1,11 @@
 import { FC, Fragment } from "react";
+import { PlayerHeader } from "../../../PlayerHeader/Playerheader";
+import { HeroHealth } from "../Health/Health";
 import { DecreaseButtons } from "../buttons/DecreaseButtons/DecreaseButtons";
 import { IncreaseButtons } from "../buttons/IncreaseButtons/IncreaseButtons";
-import { HeroHealth } from "../HeroHealth/HeroHealth";
-import { PlayerHeader } from "../../../PlayerHeader/Playerheader";
-import S from "./Hero.module.scss";
+import S from "./HealthCounter.module.scss";
 
-export const Hero: FC = () => {
+export const HealthCounter: FC = () => {
     return (
         <Fragment>
             <PlayerHeader title="Health" />
@@ -14,7 +14,6 @@ export const Hero: FC = () => {
                 <HeroHealth />
                 <IncreaseButtons />
             </div>
-            <PlayerHeader title="Poison" />
         </Fragment>
     );
 };
