@@ -10,13 +10,13 @@ export interface ButtonProps {
 
 export const IncreaseButton: FC<ButtonProps> = (props) => {
     const handleIncreaseCommanderDamage = () => {
-        let opponentDamage = CurrentCommanderDamage + props.amount;
+        let opponentDamageIncrease = props.CurrentCommanderDamage + props.amount;
 
-        if (opponentDamage > 21) {
-            opponentDamage = 21
+        if (opponentDamageIncrease > 21) {
+            opponentDamageIncrease = 21;
         }
 
-        props.setCommanderDamage(opponentDamage)
+        props.setCommanderDamage(opponentDamageIncrease);
     };
 
     return (

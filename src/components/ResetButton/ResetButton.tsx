@@ -8,16 +8,18 @@ type ResetButtonProps = {
 };
 
 export const ResetButton: FC<ResetButtonProps> = (props) => {
-    const { setHeroCurrentHealth } = useHeroStatus();
-    const { setCommanderDamageOpponentOne, setCommanderDamageOpponentTwo, setCommanderDamageOpponentThree } =
+    const { setHeroCurrentHealth, setHeroCurrentPoison } = useHeroStatus();
+    const { setCommanderDamageOpponentOne, setCommanderDamageOpponentTwo, setCommanderDamageOpponentThree, setCommanderDamageOpponentFour } =
         useCommanderDamage();
 
     // This will reset state and close reset option
     const handleReset = () => {
         setHeroCurrentHealth(40);
+        setHeroCurrentPoison(0);
         setCommanderDamageOpponentOne(0);
         setCommanderDamageOpponentTwo(0);
         setCommanderDamageOpponentThree(0);
+        setCommanderDamageOpponentFour(0);
         props.setAccordionState(false);
     };
 

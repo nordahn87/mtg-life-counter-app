@@ -10,11 +10,13 @@ export interface ButtonProps {
 
 export const DecreaseButton: FC<ButtonProps> = (props) => {
     const handleDecreaseCommanderDamage = () => {
-        props.setCommanderDamage((damage: number) => damage - props.amount);
+        let opponentDamageDecrease = props.CurrentCommanderDamage - props.amount;
 
-        if (props.CurrentCommanderDamage <= 0) {
-            props.setCommanderDamage(0);
+        if (opponentDamageDecrease < 0) {
+            opponentDamageDecrease = 0;
         }
+
+        props.setCommanderDamage(opponentDamageDecrease);
     };
 
     return (

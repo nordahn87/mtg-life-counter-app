@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lifeCounter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-white);
+}
+
+.icon {
+    height: 25px;
+}

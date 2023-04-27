@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { HeroStatusProvider } from "./providers/HeroStatus.provider";
 import { CommanderDamageProvider } from "./providers/CommanderDamage.provider";
-import { Hero } from "./components/hero/components/Hero/Hero";
 import { ResetButton } from "./components/ResetButton/ResetButton";
 import { Opponents } from "./components/opponent/components/Opponents/Opponents";
 import { Main } from "./components/Main/Main";
 import { Accordion } from "./components/Accordion/Accordion";
+import { HealthCounter } from "./components/hero/_health/HealthCounter/HealthCounter";
+import { PoisonCounter } from "./components/hero/_poison/PoisonCounter/PoisonCounter";
 import "./styles/global.scss";
 
 const App = () => {
@@ -17,7 +18,8 @@ const App = () => {
             <HeroStatusProvider>
                 <CommanderDamageProvider>
                     <Main>
-                        <Hero />
+                        <HealthCounter />
+                        <PoisonCounter />
                         <Accordion
                             accordionState={AccordionOppoent}
                             setAccordionState={setAccordionOppoent}
