@@ -1,6 +1,8 @@
 $green: #54c054;
+$poisonGreen: rgb(117, 165, 44);
 $blue: #2b45b9;
 $red: #ee4444;
+$poisonRed: rgb(213, 58, 30);
 $orange: #dd5d13;
 $white: #ffffff;
 $grey: #727272;
@@ -14,4 +16,8 @@ $darkGrey: #0e0e0e;
     --color-white: #{$white};
     --color-grey: #{$grey};
     --color-darkGrey: #{$darkGrey};
+
+    --color-poisonGreen: #{$poisonGreen};
+    --color-poisonRed: #{$poisonRed};
+
 }

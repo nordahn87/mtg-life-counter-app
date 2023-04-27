@@ -7,7 +7,11 @@ export const HeroPoison: FC = () => {
 
     return (
         <div className={S.wrapper}>
-            <div className={S.lifeCounter}>{heroCurrentPoison}</div>
+            <div className={S.poisonCounter}>
+                <div>
+                    {heroCurrentPoison} <span className={S.total}> / 10</span>
+                </div>
+            </div>
             <img className={S.icon} src={heroCurrentPoison >= 10 ? "./icons/skull.svg" : "./icons/poison.svg"} />
         </div>
     );
